@@ -29,8 +29,9 @@ dependencies {
             'org.junit.jupiter:junit-jupiter:5.9.2',
             'com.codeborne:selenide:6.14.1',
             'org.slf4j:slf4j-simple:2.0.7',
-            'io.qameta.allure:allure-selenide:2.20.1'
+            'io.qameta.allure:allure-selenide:2.20.1',
     )
+    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.9.2')
 }
 
 test {
