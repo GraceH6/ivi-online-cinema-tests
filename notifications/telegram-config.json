@@ -1,0 +1,17 @@
+{
+  "base": {
+    "project": "Ivi online cinema tests project",
+    "environment": "qa.guru",
+    "comment": "remote tests",
+    "reportLink": "",
+    "language": "en",
+    "messenger": "telegram",
+    "allureFolder": "build/reports/allure-report/allureReport",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "5873405517:AAGc5hwG2J8j8S0-9exRR3H4xc4z_Dxuazs",
+    "chat": "-1001881954145",
+    "replyTo": ""
+  }
+}
