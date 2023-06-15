@@ -8,11 +8,12 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-@Tag("remote_tests")
+
 public class MainTests extends TestBase {
     ElementsPage elementsPage = new ElementsPage();
 
     @Test
+    @Tag("remote_test")
     @DisplayName("Проверка на поиск фильма, который есть на платформе")
     void specificMovieSearchTest() {
         step("Запуск главной страницы", () -> {
@@ -27,6 +28,7 @@ public class MainTests extends TestBase {
     }
 
     @Test
+    @Tag("remote_test")
     @DisplayName("Проверка появления сообщения 'Ничего не нашлось', при поиске отсутствующего на платформе фильма")
     void absentMovieSearchTest() {
         step("Запуск главной страницы", () -> {
@@ -41,6 +43,7 @@ public class MainTests extends TestBase {
     }
 
     @Test
+    @Tag("remote_test")
     @DisplayName("Проверка наличия на платформе страницы с зарубежными фильмами")
     void foreignMoviesSectionShouldExist() {
         step("Запуск главной страницы", () -> {
@@ -55,6 +58,7 @@ public class MainTests extends TestBase {
     }
 
     @Test
+    @Tag("remote_test")
     @DisplayName("Проверка наличия фильмов жанра 'Биография'")
     void biopicMovieGenreShouldExist() {
         step("Запуск главной страницы", () -> {
@@ -68,6 +72,7 @@ public class MainTests extends TestBase {
     }
 
     @Test
+    @Tag("remote_test")
     @DisplayName("Проверка наличия сериалов жанра 'Биография'")
     void biopicSerialGenreShouldExist() {
         step("Запуск главной страницы", () -> {
@@ -81,6 +86,7 @@ public class MainTests extends TestBase {
     }
 
     @Test
+    @Tag("remote_test")
     @DisplayName("Проверка на исчезновение модального окна, после клика на один из предложенных элементов в нём")
     void modalWithCountriesShouldDisappearAfterSelectingCountry() {
         step("Запуск страницы зарубежных фильмов", () -> {
@@ -97,6 +103,7 @@ public class MainTests extends TestBase {
     }
 
     @Test
+    @Tag("remote_test")
     @DisplayName("Проверка присутствия на платформе страницы 'Политика конфиденциальности'")
     void shouldContainPrivacyPolicyPage() {
         step("Запуск главной страницы", () -> {
