@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-@Tag("remote_test")
+@Tag("remote_tests")
 public class MainTests extends TestBase {
     ElementsPage elementsPage = new ElementsPage();
 
