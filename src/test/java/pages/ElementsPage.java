@@ -1,6 +1,5 @@
 package pages;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -21,8 +20,7 @@ public class ElementsPage {
             seriesButton = testData.getSeries(),
             menuSectionType = testData.getMenuSection(),
             countryName = testData.getCountry(),
-            searchingPageName = testData.getSearchingPage(),
-            pageTitle = testData.getSearchingPageTitle();
+            searchingPageName = testData.getSearchingPage();
 
     public SelenideElement subscriptionModal = $("div.fullscreen-popup"),
             subsModalCloseBtn = $("div.nbl-controlButton__caption"),

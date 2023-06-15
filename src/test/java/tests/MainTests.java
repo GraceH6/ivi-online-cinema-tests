@@ -114,7 +114,7 @@ public class MainTests extends TestBase {
         });
         step("Проверка наличия ссылки на страницу 'Политика конфиденциальности'", () -> {
             elementsPage.privacyPolicyElement.click();
-            elementsPage.pageElement.shouldHave(text(elementsPage.pageTitle));
+            elementsPage.pageElement.shouldHave(text(elementsPage.searchingPageName));
         });
     }
 }

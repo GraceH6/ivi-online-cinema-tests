@@ -13,8 +13,7 @@ public class TestData {
             series = "Сериалы",
             menuSection = "Страны",
             country = "Казахстан",
-            searchingPage = "Политика конфиденциальности",
-            searchingPageTitle = "Политика конфиденциальности сервиса Иви";
+            searchingPage = "Политика конфиденциальности";
 
     public String getMovieNameForPos() {
         return movieNameForPos;
@@ -58,10 +57,6 @@ public class TestData {
 
     public String getSearchingPage() {
         return searchingPage;
-    }
-
-    public String getSearchingPageTitle() {
-        return searchingPageTitle;
     }
 
     public String getUrl() {
