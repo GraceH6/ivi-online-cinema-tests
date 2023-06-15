@@ -1,7 +1,7 @@
 package pages;
 
 public class TestData {
-    private String url = "https://www.ivi.ru",
+    private String url = "https://www.ivi.ru/",
             foreignMoviesPageUrl = "https://www.ivi.ru/movies/foreign",
             movieNameForPos = "жить жизнь",
             movieNameForNeg = "семейные узы",
