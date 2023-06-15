@@ -27,7 +27,7 @@ public class ElementsPage {
             searchBtn = $("button[data-test='header_search']"),
             searchModal = $("div.search"),
             searchInput = $("input[data-test='search_input']"),
-            existingMovieElement = $$(".searchBlock__container").first().$("a[href='/watch/zhit-zhizn']"),
+            existingMovieElement = $(".searchBlock__searchResultItem").$(".nbl-slimPosterBlock__title"),
             emptyResultModal = $(".emptyResult__title"),
             headerMenu = $$(".headerMenu__listItem").filterBy(text(moviesButton)).first(),
             productModal = $("#headerDropdownBody"),
@@ -39,5 +39,6 @@ public class ElementsPage {
             countriesBar = $(".filterDropdown__content"),
             specificCountryElement = $$(".filterDropdown__item").filterBy(text(countryName)).first(),
             privacyPolicyElement = $("a[href='/info/confidential']"),
-            pageElement = $(".textual__content");
+            pageElement = $(".textual__content"),
+            footer = $(".iviFooter__container");
 }

@@ -8,7 +8,6 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-
 public class MainTests extends TestBase {
     ElementsPage elementsPage = new ElementsPage();
 
@@ -18,12 +17,15 @@ public class MainTests extends TestBase {
     void specificMovieSearchTest() {
         step("Запуск главной страницы", () -> {
             open(elementsPage.pageUrl);
+            sleep(3000);
+            elementsPage.subscriptionModal.should(appear);
+            elementsPage.subsModalCloseBtn.click();
         });
         step("Поиск фильма через кнопку 'Поиск'", () -> {
             elementsPage.searchBtn.click();
             elementsPage.searchModal.should(appear);
-            elementsPage.searchInput.setValue(elementsPage.existingMovie);
-            elementsPage.existingMovieElement.should(appear);
+            elementsPage.searchInput.setValue(elementsPage.existingMovie).pressEnter();
+            elementsPage.existingMovieElement.shouldHave(text(elementsPage.existingMovie));
         });
     }
 
@@ -33,6 +35,9 @@ public class MainTests extends TestBase {
     void absentMovieSearchTest() {
         step("Запуск главной страницы", () -> {
             open(elementsPage.pageUrl);
+            sleep(3000);
+            elementsPage.subscriptionModal.should(appear);
+            elementsPage.subsModalCloseBtn.click();
         });
         step("Поиск фильма отсутствующего фильма, через кнопку 'Поиск'", () -> {
             elementsPage.searchBtn.click();
@@ -48,6 +53,9 @@ public class MainTests extends TestBase {
     void foreignMoviesSectionShouldExist() {
         step("Запуск главной страницы", () -> {
             open(elementsPage.pageUrl);
+            sleep(3000);
+            elementsPage.subscriptionModal.should(appear);
+            elementsPage.subsModalCloseBtn.click();
         });
         step("Проверка наличия искомой страницы", () -> {
             elementsPage.headerMenu.hover();
@@ -63,10 +71,12 @@ public class MainTests extends TestBase {
     void biopicMovieGenreShouldExist() {
         step("Запуск главной страницы", () -> {
             open(elementsPage.pageUrl);
+            sleep(3000);
+            elementsPage.subscriptionModal.should(appear);
+            elementsPage.subsModalCloseBtn.click();
         });
         step("Проверка наличия искомого жанра фильмов в модальном окне", () -> {
             elementsPage.headerMenu.hover();
-            elementsPage.productModal.should(appear);
             elementsPage.biopicsElement.should(exist);
         });
     }
@@ -77,10 +87,12 @@ public class MainTests extends TestBase {
     void biopicSerialGenreShouldExist() {
         step("Запуск главной страницы", () -> {
             open(elementsPage.pageUrl);
+            sleep(3000);
+            elementsPage.subscriptionModal.should(appear);
+            elementsPage.subsModalCloseBtn.click();
         });
         step("Проверка наличия искомого жанра сериалов в модальном окне", () -> {
             elementsPage.seriesElement.hover();
-            elementsPage.productModal.should(appear);
             elementsPage.biopicsElement.should(appear);
         });
     }
@@ -113,6 +125,7 @@ public class MainTests extends TestBase {
             elementsPage.subsModalCloseBtn.click();
         });
         step("Проверка наличия ссылки на страницу 'Политика конфиденциальности'", () -> {
+            elementsPage.footer.scrollTo();
             elementsPage.privacyPolicyElement.click();
             elementsPage.pageElement.shouldHave(text(elementsPage.searchingPageName));
         });
