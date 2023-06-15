@@ -16,10 +16,7 @@ public class TestBase {
         Configuration.browser = browserAndItsVersion[0];
         Configuration.browserVersion = browserAndItsVersion[1];
         Configuration.browserSize = System.getProperty("browserSize");
-        String selenoidUrl = System.getProperty("selenoidUrl");
-        String selenoidLogin = System.getProperty("selenoidLogin");
-        String selenoidPass = System.getProperty("selenoidPass");
-        Configuration.remote = String.format("https://%s:%s@%s", selenoidLogin, selenoidPass, selenoidUrl);
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
         Configuration.pageLoadStrategy = "eager";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
